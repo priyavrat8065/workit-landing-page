@@ -4,6 +4,29 @@
   padding: 0;
   box-sizing: border-box;
 }
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+/* manrope-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/fonts/manrope-v15-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* manrope-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  src: url("assets/fonts/manrope-v15-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 /* CSS VARIABLES */
 :root {
   /* COLORS */
@@ -12,4 +35,30 @@
   --purple-500: hsl(271, 12%, 34%);
   --purple-100: hsl(276, 100%, 99%);
   --white--color: hsl(0, 0%, 0%);
+}
+body {
+  min-height: 100vh;
+}
+.bg-container {
+  background-color: var(--purple-900);
+  /*  padding-top: 2rem;*/
+  /*  overflow: auto;*/
+  display: flow-root;
+}
+.wrapper {
+  width: min(calc(100% - 40px), calc(1440px - 160px));
+  margin-inline: auto;
+  margin-block: 2rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__link {
+  text-decoration: none;
+  line-height: 1.5;
+  color: white;
+  font-size: 18px;
+  font-family: "manrope", sans-serif;
 }
