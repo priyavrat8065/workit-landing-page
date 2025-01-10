@@ -9,6 +9,24 @@ img {
   display: block;
   height: auto;
 }
+/* fraunces-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/fraunces-v31-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* fraunces-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/fraunces-v31-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 /* manrope-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -34,10 +52,14 @@ img {
   --purple-900: hsl(273, 85%, 13%);
   --purple-500: hsl(271, 12%, 34%);
   --purple-100: hsl(276, 100%, 99%);
-  --white--color: hsl(0, 0%, 0%);
+  --white-color: hsl(0, 0%, 100%);
+  /* FONTS */
+  --ff-manrope: "manrope", sans-serif;
+  --ff-fraunces: "Fraunces", sans;
 }
 body {
   min-height: 100vh;
+  font-family: var(--ff-manrope);
 }
 .bg-container {
   background-color: var(--purple-900);
@@ -45,14 +67,32 @@ body {
   /*  overflow: auto;*/
   /*  display: flow-root;*/
 }
+
+/* UTILITIES CLASSES */
+
 .wrapper {
   width: min(calc(100% - 40px), calc(1440px - 160px));
   margin-inline: auto;
   /*  margin-block: 2rem;*/
 }
 .padding {
-  padding-block: 2rem;
+  padding-block-start: 2rem;
 }
+.mb {
+  margin-bottom: 3.5rem;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.underline {
+  text-decoration: underline;
+  text-decoration-color: var(--green-color);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 10px;
+}
+
+/* HEADER CSS */
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -63,5 +103,25 @@ body {
   line-height: 1.5;
   color: white;
   font-size: 18px;
-  font-family: "manrope", sans-serif;
+}
+
+/* HERO CSS */
+.hero {
+  text-align: center;
+  color: var(--white-color);
+}
+.hero__heading {
+  font-size: 3rem;
+  margin-block-end: 2.5rem;
+  font-family: var(--ff-fraunces);
+}
+.hero__btn:any-link {
+  display: inline-block;
+  background: var(--green-color);
+  padding: 0.75em 2em;
+  border: none;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  line-height: 1.8;
 }
