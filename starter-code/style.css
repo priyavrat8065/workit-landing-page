@@ -43,12 +43,15 @@ body {
   background-color: var(--purple-900);
   /*  padding-top: 2rem;*/
   /*  overflow: auto;*/
-  display: flow-root;
+  /*  display: flow-root;*/
 }
 .wrapper {
   width: min(calc(100% - 40px), calc(1440px - 160px));
   margin-inline: auto;
-  margin-block: 2rem;
+  /*  margin-block: 2rem;*/
+}
+.padding {
+  padding-block: 2rem;
 }
 .header {
   display: flex;
