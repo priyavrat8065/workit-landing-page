@@ -109,6 +109,8 @@ body {
 .hero {
   text-align: center;
   color: var(--white-color);
+  padding-bottom: 9rem;
+  position: relative;
 }
 .hero__heading {
   font-size: 3rem;
@@ -124,4 +126,13 @@ body {
   color: black;
   font-weight: bold;
   line-height: 1.8;
+}
+.curve {
+  /*  position: relative;*/
+  border-radius: 0 0 30% 30% / 0 0 20px 20px;
+}
+.hero__image {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(calc(50% - 0px));
 }
