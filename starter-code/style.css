@@ -147,6 +147,7 @@ body {
   text-align: center;
   gap: 2rem;
   background: var(--purple-100);
+  position: relative;
 }
 .benefits {
   /*  display: flex;
@@ -183,4 +184,25 @@ body {
 }
 .benefits__desc:last-child {
   margin-bottom: 4rem;
+}
+.curve-light-purple {
+  position: absolute;
+  bottom: 0;
+  background: var(--purple-100);
+  width: 100%;
+  height: 24px;
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+  transform-style: preserve-3d;
+}
+/* to create white background so that curve  becomes visible */
+.curve-light-purple::after {
+  content: "";
+  display: block;
+  position: abosulute;
+  width: 100%;
+  bottom: 0;
+  background: white;
+  height: 24px;
+  transform: translateZ(-1px);
 }
