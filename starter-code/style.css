@@ -63,6 +63,8 @@ body {
 }
 .bg-container {
   background-color: var(--purple-900);
+  position: relative;
+  min-height: 500px;
   /*  padding-top: 2rem;*/
   /*  overflow: auto;*/
   /*  display: flow-root;*/
@@ -110,7 +112,9 @@ body {
   text-align: center;
   color: var(--white-color);
   padding-bottom: 9rem;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
 }
 .hero__heading {
   font-size: 3rem;
@@ -126,13 +130,19 @@ body {
   color: black;
   font-weight: bold;
   line-height: 1.8;
+  margin-bottom: 4.5rem;
 }
 .curve {
   /*  position: relative;*/
   border-radius: 0 0 30% 30% / 0 0 20px 20px;
 }
+.hero figure {
+  display: flex;
+  justify-content: center;
+}
 .hero__image {
-  position: absolute;
+  width: min(100%, 514px);
+  /*  position: absolute;
   bottom: 0;
-  transform: translateY(calc(50% - 0px));
+  transform: translateY(calc(50% - 0px));*/
 }
