@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
 /* CSS RESET */
 * {
   margin: 0;
@@ -8,23 +9,6 @@ img {
   max-width: 100%;
   display: block;
   height: auto;
-}
-/* fraunces-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Fraunces";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/fraunces-v31-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* fraunces-600 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Fraunces";
-  font-style: normal;
-  font-weight: 600;
-  src: url("../fonts/fraunces-v31-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* manrope-regular - latin */
@@ -60,11 +44,21 @@ img {
 body {
   min-height: 100vh;
   font-family: var(--ff-manrope);
+  background: var(--purple-100);
 }
 .bg-container {
   background-color: var(--purple-900);
   position: relative;
-  min-height: 500px;
+  min-height: clamp(
+    31.25rem,
+    25.419776119402986rem + 24.875621890547265vw,
+    34.375rem
+  );
+  margin-bottom: clamp(
+    10rem,
+    2.5373134328358207rem + 31.8407960199005vw,
+    14rem
+  );
   /*  padding-top: 2rem;*/
   /*  overflow: auto;*/
   /*  display: flow-root;*/
@@ -145,4 +139,48 @@ body {
   /*  position: absolute;
   bottom: 0;
   transform: translateY(calc(50% - 0px));*/
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  background: var(--purple-100);
+}
+.benefits {
+  /*  display: flex;
+  flex-direction: column;
+  align-items: center;*/
+}
+
+.number {
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid var(--purple-500);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: var(--purple-900);
+  font-family: var(--ff-fraunces);
+  font-weight: 600;
+  font-size: 20px;
+}
+.benefits__heading {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--ff-fraunces);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--purple-900);
+}
+.benefits__desc {
+  color: var(--purple-900);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.benefits__desc:last-child {
+  margin-bottom: 4rem;
 }
