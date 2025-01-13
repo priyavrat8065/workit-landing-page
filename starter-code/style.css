@@ -115,16 +115,26 @@ body {
   margin-block-end: 2.5rem;
   font-family: var(--ff-fraunces);
 }
-.hero__btn:any-link {
+.hero__btn {
+  /*  display: inline-block;
+  background: var(--green-color);*/
+  padding: 0.75em 2em;
+  /*border: none;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  line-height: 1.8;*/
+  margin-bottom: 4.5rem;
+}
+.btn:any-link {
   display: inline-block;
   background: var(--green-color);
-  padding: 0.75em 2em;
+  color: var(--purple-900);
   border: none;
   text-decoration: none;
   color: black;
   font-weight: bold;
   line-height: 1.8;
-  margin-bottom: 4.5rem;
 }
 .curve {
   /*  position: relative;*/
@@ -205,4 +215,51 @@ body {
   background: white;
   height: 24px;
   transform: translateZ(-1px);
+}
+
+/* FOUNDER SECTION  */
+.founder {
+  padding-top: 7rem;
+  background: var(--purple-500);
+  text-align: center;
+}
+.founder__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  /*  position: relative;
+  z-index: 1;*/
+}
+.founder__image {
+  width: 280px;
+  height: 280px;
+  transform: translateY(20%);
+  z-index: 0;
+  /*  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  z-index: -1;*/
+}
+.founder__card_content {
+  background: var(--purple-900);
+  padding: 2rem;
+  color: var(--white-color);
+  z-index: 1;
+}
+.founder__heading {
+  font-family: var(--ff-fraunces);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+.founder__text {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.founder__btn {
+  padding: 0.75em 2em;
+  /*  margin-bottom: 2rem;*/
 }
