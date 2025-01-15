@@ -282,14 +282,17 @@ body {
 
 /*  from 576px to 768px medium screens  */
 @media screen and (min-width: 36em) {
-/*  .bg-container {
+  /*  .bg-container {
     background-image: url(assets/images/bg-pattern-1.svg);
     background-repeat: no-repeat;
     background-origin:padding-box;
     background-position-x:
     width: min(calc(100% - 5.5rem), calc(1440px - 160px));
     /*  margin-block: 2rem;*/
-  }*/
+  /*  }*/
+  .wrapper {
+    width: min(calc(100% - 88px), calc(1440px - 320px));
+  }
   .btn {
     font-size: clamp(1rem, 0.625rem + 1.0416666666666665vw, 1.125rem);
   }
@@ -320,9 +323,76 @@ body {
     width: min(100%, 31.5rem);
     align-self: end;
     text-align: justify;
-    padding:3rem;
+    padding: 3rem;
   }
   .founder__heading {
     font-size: clamp(2rem, -1rem + 8.333333333333332vw, 3rem);
+  }
+}
+/* from 768px to 960px large screens */
+@media screen and (min-width: 768px) {
+  .hero__heading {
+    font-size: 3.75rem;
+    font-size: clamp(3.75rem, 1.25rem + 5.208333333333333vw, 4.375rem);
+  }
+  .btn,
+  .benefits__desc,
+  .founder__text {
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.75rem + 0.5208333333333333vw, 1.0625rem);
+  }
+
+  .benefits__heading {
+    font-size: 1.75rem;
+    font-size: clamp(1.75rem, 1.25rem + 1.0416666666666665vw, 1.875rem);
+  }
+  .founder__image {
+    width: clamp(17.5rem, -8.5rem + 54.166666666666664vw, 24rem);
+    transform: translateY(clamp(7rem, -13rem + 41.666666666666664vw, 12rem));
+  }
+  .founder__card_content {
+    width: clamp(31.5rem, 17.5rem + 29.166666666666664vw, 35rem);
+  }
+  .founder__heading {
+    font-size: 3rem;
+    font-size: clamp(3rem, 2rem + 2.083333333333333vw, 3.25rem);
+  }
+}
+@media screen and (min-width: 960px) {
+  .main {
+    padding-top: 5rem;
+  }
+  .wrapper {
+    width: min(
+      calc(100% - clamp(5.5rem, -23.5rem + 48.333333333333336vw, 20rem)),
+      calc(1440px - 320px)
+    );
+  }
+  .hero__heading {
+    font-size: 4.375rem;
+    font-size: clamp(4.375rem, 3.125rem + 2.083333333333333vw, 5rem);
+  }
+  .btn,
+  .benefits__desc,
+  .founder__text {
+    font-size: 1.0625rem;
+    font-size: clamp(1.0625rem, 0.9375rem + 0.20833333333333334vw, 1.125rem);
+  }
+  .benefits__heading {
+    font-size: 1.875rem;
+    font-size: clamp(1.875rem, 1.625rem + 0.4166666666666667vw, 2rem);
+  }
+  .founder__image {
+    width: clamp(24rem, 12.375rem + 19.375vw, 29.8125rem);
+    transform: translateY(12rem);
+  }
+  .founder__card_content {
+    width: clamp(35rem, 13.75rem + 35.41666666666667vw, 45.625rem);
+    text-align: start;
+    padding: 4rem;
+  }
+  .founder__heading {
+    font-size: 3.25rem;
+    font-size: clamp(3.25rem, 2.75rem + 0.8333333333333334vw, 3.5rem);
   }
 }
