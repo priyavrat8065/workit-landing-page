@@ -151,7 +151,7 @@ body {
   transform: translateY(calc(50% - 0px));*/
 }
 
-.main {
+.main .wrapper {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -360,7 +360,7 @@ body {
 }
 @media screen and (min-width: 960px) {
   .main {
-    padding-top: 5rem;
+    padding-top: 8rem;
   }
   .wrapper {
     width: min(
@@ -372,6 +372,7 @@ body {
     font-size: 4.375rem;
     font-size: clamp(4.375rem, 3.125rem + 2.083333333333333vw, 5rem);
   }
+
   .btn,
   .benefits__desc,
   .founder__text {
@@ -394,5 +395,16 @@ body {
   .founder__heading {
     font-size: 3.25rem;
     font-size: clamp(3.25rem, 2.75rem + 0.8333333333333334vw, 3.5rem);
+  }
+}
+@media screen and (min-width: 1236px) {
+  .main .wrapper {
+    flex-direction: row;
+  }
+  .benefits {
+    flex-direction: column;
+  }
+  .benefits__text {
+    text-align: center;
   }
 }
