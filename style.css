@@ -418,3 +418,12 @@ body {
     text-align: center;
   }
 }
+.bg-pattern {
+  position: absolute;
+}
+.pattern-1 {
+  left: calc(
+    clamp(6.25rem, 24.08098591549296rem + -19.812206572769952vw, 19.4375rem) *
+      -1
+  );
+}
