@@ -45,6 +45,7 @@ body {
   min-height: 100vh;
   font-family: var(--ff-manrope);
   background: var(--purple-100);
+  overflow-x: hidden;
 }
 .bg-container {
   background-color: var(--purple-900);
@@ -59,6 +60,7 @@ body {
     2.5373134328358207rem + 31.8407960199005vw,
     14rem
   );
+  /*  overflow-x: hidden;*/
   /*  padding-top: 2rem;*/
   /*  overflow: auto;*/
   /*  display: flow-root;*/
@@ -146,6 +148,7 @@ body {
   color: var(--green-color);
   outline: 2px solid var(--green-color);
 }
+
 .curve {
   /*  position: relative;*/
   border-radius: 0 0 30% 30% / 0 0 20px 20px;
@@ -349,7 +352,7 @@ body {
   .benefits__desc,
   .founder__text {
     font-size: 1rem;
-    font-size: clamp(1rem, 0.75rem + 0.5208333333333333vw, 1.0625rem);
+    font-size: 1.125rem;
   }
 
   .benefits__heading {
@@ -418,12 +421,24 @@ body {
     text-align: center;
   }
 }
+
 .bg-pattern {
   position: absolute;
 }
 .pattern-1 {
+  left: -6.25rem;
   left: calc(
     clamp(6.25rem, 24.08098591549296rem + -19.812206572769952vw, 19.4375rem) *
       -1
   );
+}
+.pattern-2 {
+  /*  right: -320px;*/
+  right: -160px;
+  right: -45px;
+  right: calc(
+    clamp(2.8125rem, 12.53080985915493rem + -10.7981220657277vw, 10rem) * -1
+  );
+  /*  right: 0;*/
+  top: 344px;
 }
