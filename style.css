@@ -94,11 +94,15 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.header__link {
+.header__link:any-link {
   text-decoration: none;
   line-height: 1.5;
   color: white;
   font-size: 18px;
+}
+.header__link:hover,
+.header__link:focus {
+  color: var(--green-color);
 }
 
 /* HERO CSS */
@@ -135,6 +139,12 @@ body {
   color: black;
   font-weight: bold;
   line-height: 1.8;
+}
+.btn:hover,
+.btn:focus {
+  background: var(--purple-900);
+  color: var(--green-color);
+  outline: 2px solid var(--green-color);
 }
 .curve {
   /*  position: relative;*/
