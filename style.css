@@ -121,6 +121,12 @@ body {
   top: 274px;
   z-index: 3;
 }
+.pattern-3 {
+  display: none;
+  right: 0;
+  bottom: -50%;
+  transform: translateY(-50%);
+}
 
 /* UTILITIES CLASSES */
 
@@ -338,6 +344,7 @@ body {
   padding: 2rem;
   color: var(--white-color);
   z-index: 1;
+  position: relative;
 }
 .founder__heading {
   font-family: var(--ff-fraunces);
@@ -383,6 +390,10 @@ body {
   /*  }*/
   .pattern-2 {
     top: clamp(17.125rem, 11.5rem + 15.625vw, 19rem);
+  }
+  .pattern-3 {
+    display: block;
+    right: clamp(0rem, -3rem + 8.333333333333332vw, 1rem);
   }
   .wrapper {
     width: min(calc(100% - 88px), calc(1440px - 320px));
@@ -492,6 +503,10 @@ body {
   }
   .pattern-2 {
     top: clamp(20.5rem, 17.375rem + 5.208333333333334vw, 22.0625rem);
+  }
+  .pattern-3 {
+    bottom: calc(-50% + clamp(1rem, -1rem + 3.3333333333333335vw, 2rem));
+    right: clamp(1rem, -5rem + 10vw, 4rem);
   }
   .main {
     padding-top: 4rem;
