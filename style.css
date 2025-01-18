@@ -212,7 +212,7 @@ body {
 /*border-radius: 0 0 30% 30% / 0 0 20px 20px;
 }*/
 .main {
-  padding-top: 4rem;
+  padding-block: 4rem;
   position: relative;
 }
 .main .overlay {
@@ -285,9 +285,7 @@ body {
   font-size: 1rem;
   line-height: 1.8;
 }
-.main section:nth-child(3) {
-  margin-bottom: 4rem;
-}
+
 /*.curve-light-purple {
   position: absolute;
   bottom: 0;
@@ -456,6 +454,7 @@ body {
     padding-top: calc(
       clamp(0rem, -13.999999999999998rem + 29.166666666666664vw, 3.5rem)
     );
+    padding-bottom: 2.75rem;
   }
   .btn,
   .benefits__desc,
@@ -495,7 +494,8 @@ body {
     top: clamp(20.5rem, 17.375rem + 5.208333333333334vw, 22.0625rem);
   }
   .main {
-    padding-block: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 9rem;
   }
   .wrapper {
     width: min(
