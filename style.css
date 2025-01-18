@@ -56,16 +56,38 @@ body {
     25.419776119402986rem + 24.875621890547265vw,
     34.375rem
   );
+  min-height: 31.25rem;
   margin-bottom: clamp(
     10rem,
     2.5373134328358207rem + 31.8407960199005vw,
     14rem
   );
+  z-index: 1;
   overflow-x: clip;
   /*  overflow-x: hidden;*/
   /*  padding-top: 2rem;*/
   /*  overflow: auto;*/
   /*  display: flow-root;*/
+}
+.bg-container::after {
+  content: "";
+  position: absolute;
+  background: var(--purple-900);
+
+  width: 100%;
+  height: 24px;
+  bottom: 0;
+  border-bottom-left-radius: 100% 200%;
+  border-bottom-right-radius: 100% 200%;
+  z-index: 0;
+}
+.bg-container .overlay {
+  position: absolute;
+  bottom: 0;
+  background: var(--purple-100);
+  width: 100%;
+  height: 24px;
+  z-index: -1;
 }
 
 /* BACKGROUND RINGS */
@@ -88,6 +110,7 @@ body {
   );
   /*  right: 0;*/
   top: 274px;
+  z-index: 3;
 }
 
 /* UTILITIES CLASSES */
@@ -139,6 +162,7 @@ body {
   position: absolute;
   left: 50%;
   translate: -50%;
+  z-index: 1;
 }
 .hero__heading {
   font-size: 3rem;
@@ -183,7 +207,7 @@ body {
   justify-content: center;
 }
 .hero__image {
-  width: min(100%, 514px);
+  width: min(100%, 320px);
   /*  position: absolute;
   bottom: 0;
   transform: translateY(calc(50% - 0px));*/
@@ -372,12 +396,25 @@ body {
 }
 /* from 768px to 960px large screens */
 @media screen and (min-width: 768px) {
+  .bg-container {
+    min-height: 32.75rem;
+  }
+  .bg-container::after,
+  .bg-container .overlay {
+    height: 56px;
+  }
   .pattern-2 {
     top: clamp(19rem, 13rem + 12.5vw, 20.5rem);
   }
   .hero__heading {
     font-size: 3.75rem;
     font-size: clamp(3.75rem, 1.25rem + 5.208333333333333vw, 4.375rem);
+  }
+  .hero__image {
+    width: min(
+      100%,
+      clamp(20rem, -28.499999999999993rem + 101.04166666666666vw, 32.125rem)
+    );
   }
   .btn,
   .benefits__desc,
@@ -403,6 +440,13 @@ body {
   }
 }
 @media screen and (min-width: 960px) {
+  .bg-container {
+    min-height: clamp(32.75rem, 3rem + 49.583333333333336vw, 47.625rem);
+  }
+  .bg-container::after,
+  .bg-container .overlay {
+    height: clamp(3.5rem, 1.5rem + 3.3333333333333335vw, 4.5rem);
+  }
   .pattern-2 {
     top: clamp(20.5rem, 17.375rem + 5.208333333333334vw, 22.0625rem);
   }
@@ -413,6 +457,12 @@ body {
     width: min(
       calc(100% - clamp(5.5rem, -23.5rem + 48.333333333333336vw, 20rem)),
       calc(1440px - 320px)
+    );
+  }
+  .hero__image {
+    width: min(
+      100%,
+      clamp(32.125rem, 0.504999999999999rem + 52.7vw, 47.935rem)
     );
   }
   .hero__heading {
