@@ -70,7 +70,7 @@ body {
   /*  display: flow-root;*/
 }
 .bg-container::after,
-.bg-light-purple::after {
+.main::after {
   content: "";
   position: absolute;
 
@@ -213,6 +213,7 @@ body {
 }*/
 .main {
   padding-top: 4rem;
+  position: relative;
 }
 .main .overlay {
   background: var(--white-color);
@@ -230,7 +231,6 @@ body {
 }
 .bg-light-purple {
   background: var(--purple-100);
-  position: relative;
 }
 /*.bg-light-purple::after {
   content: "";
@@ -484,9 +484,10 @@ body {
   .bg-container {
     min-height: clamp(32.75rem, 3rem + 49.583333333333336vw, 47.625rem);
   }
+
   .bg-container::after,
   .bg-container .overlay,
-  bg-light-purple::after,
+  .bg-light-purple::after,
   .main .overlay {
     height: clamp(3.5rem, 1.5rem + 3.3333333333333335vw, 4.5rem);
   }
@@ -494,7 +495,7 @@ body {
     top: clamp(20.5rem, 17.375rem + 5.208333333333334vw, 22.0625rem);
   }
   .main {
-    padding-top: 4rem;
+    padding-block: 4rem;
   }
   .wrapper {
     width: min(
